@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VORA Sentinel | Mobile External Security Probe Node</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #111827;
+      --border: #1f2937;
+      --accent: #3b82f6;
+      --accent-glow: rgba(59, 130, 246, 0.4);
+      --danger: #ef4444;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 1rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .node-card {
+      width: 100%;
+      max-width: 480px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+    .header-lockup {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+    }
+    .node-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid var(--success);
+      color: var(--success);
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-weight: 700;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--success);
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.3); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .meta-box {
+      background: #0d131f;
+      border-radius: 10px;
+      padding: 0.8rem 1rem;
+      font-size: 0.85rem;
+      margin-bottom: 1.2rem;
+      line-height: 1.6;
+    }
+    .meta-row { display: flex; justify-content: space-between; }
+    .meta-label { color: var(--text-muted); }
+    .btn-action {
+      width: 100%;
+      padding: 0.9rem;
+      border-radius: 10px;
+      border: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-bottom: 0.75rem;
+      transition: all 0.2s ease;
+    }
+    .btn-action:active { transform: scale(0.98); }
+    .btn-primary { background: linear-gradient(135deg, #2563eb, #1d4ed8); color: white; }
+    .btn-danger { background: linear-gradient(135deg, #dc2626, #b91c1c); color: white; }
+    .btn-warning { background: linear-gradient(135deg, #d97706, #b45309); color: white; }
+    .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+    .log-terminal {
+      background: #050811;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.8rem;
+      font-family: monospace;
+      font-size: 0.75rem;
+      color: #38bdf8;
+      height: 140px;
+      overflow-y: auto;
+      margin-top: 1rem;
+    }
+    .input-group {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .input-field {
+      flex: 1;
+      padding: 0.7rem;
+      background: #0d131f;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: white;
+      font-size: 0.85rem;
+    }
+    .nav-back {
+      margin-top: 1.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="node-card">
+    <div class="header-lockup">
+      <i class="fa-solid fa-tower-broadcast fa-2x" style="color: var(--accent);"></i>
+      <div>
+        <h2 style="font-size: 1.15rem;">VORA Mobile Sentinel Node</h2>
+        <p style="font-size: 0.8rem; color: var(--text-muted);">External Device Telemetry Client (Level 5)</p>
+      </div>
+      <div style="margin-left: auto;">
+        <span class="node-badge" id="status-badge"><span class="pulse-dot"></span> LIVE</span>
+      </div>
+    </div>
+
+    <div class="meta-box">
+      <div class="meta-row">
+        <span class="meta-label">Device Identifier:</span>
+        <strong id="disp-device-id">NODE-MOBILE-01</strong>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Device Class:</span>
+        <span>Mobile Phone / Remote Probe</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Target Cloud Host:</span>
+        <span id="disp-host" style="color: var(--accent);">voragenofficial.netlify.app</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Packets Transmitted:</span>
+        <strong id="disp-packets" style="color: var(--success);">0</strong>
+      </div>
+    </div>
+
+    <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.6rem; font-weight: 600;">
+      DEMONSTRATION TRIGGERS (Live Evaluation):
+    </p>
+
+    <button class="btn-action btn-primary" onclick="sendTelemetryPing()">
+      <i class="fa-solid fa-heartbeat"></i> 1. Transmit Device Heartbeat Telemetry
+    </button>
+
+    <button class="btn-action btn-danger" onclick="triggerAttack('typosquatting')">
+      <i class="fa-solid fa-triangle-exclamation"></i> 2. Inject Phishing Attack (g00gle.xyz)
+    </button>
+
+    <button class="btn-action btn-warning" onclick="triggerAttack('brute_force')">
+      <i class="fa-solid fa-user-shield"></i> 3. Trigger Credential Brute Force Probe
+    </button>
+
+    <button class="btn-action btn-danger" onclick="triggerAttack('fee_extortion')">
+      <i class="fa-solid fa-money-bill-transfer"></i> 4. Submit Advance-Fee Fraud Document
+    </button>
+
+    <div style="margin-top: 1rem;">
+      <label style="font-size: 0.8rem; color: var(--text-muted);">Custom Domain Security Audit:</label>
+      <div class="input-group">
+        <input type="text" id="target-domain-input" class="input-field" placeholder="e.g. micr0soft-jobs.top" />
+        <button class="btn-action btn-outline" style="width: auto; margin-bottom: 0; padding: 0.7rem 1rem;" onclick="verifyCustomDomain()">
+          Audit
+        </button>
+      </div>
+    </div>
+
+    <div class="log-terminal" id="terminal-log">
+      <div>[SYSTEM] Sentinel Mobile Probe Initialized.</div>
+      <div>[NETWORK] Ready to transmit across Internet to Live SOC.</div>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="/" class="nav-back"><i class="fa-solid fa-arrow-left"></i> Return to Main VORA Platform</a>
+    </div>
+  </div>
+
+  <script>
+    // Determine API Endpoint: Prefer local if on localhost, else cloud
+    const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+      ? 'http://localhost:5000/api'
+      : '/api';
+
+    const deviceId = 'NODE-MOBILE-' + Math.random().toString(36).substring(2, 7).toUpperCase();
+    document.getElementById('disp-device-id').textContent = deviceId;
+    document.getElementById('disp-host').textContent = window.location.host;
+
+    let packets = 0;
+
+    function log(msg) {
+      const term = document.getElementById('terminal-log');
+      const div = document.createElement('div');
+      const time = new Date().toLocaleTimeString();
+      div.textContent = `[${time}] ${msg}`;
+      term.appendChild(div);
+      term.scrollTop = term.scrollHeight;
+    }
+
+    async function sendTelemetryPing() {
+      packets++;
+      document.getElementById('disp-packets').textContent = packets;
+      log('Transmitting telemetry packet...');
+      try {
+        const res = await fetch(`${API_BASE}/sentinel/telemetry`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            device_id: deviceId,
+            device_name: 'External Mobile Phone (' + (navigator.userAgentData?.platform || navigator.platform || 'Mobile') + ')',
+            device_type: 'Mobile',
+            threat_detected: 0
+          })
+        });
+        const data = await res.json();
+        log(`ACK Received! Status: ${data.status} | IP: ${data.registered_ip}`);
+      } catch (err) {
+        log(`Telemetry Error: ${err.message}`);
+      }
+    }
+
+    async function triggerAttack(type) {
+      packets++;
+      document.getElementById('disp-packets').textContent = packets;
+      log(`Launching test probe: '${type}'...`);
+      try {
+        const res = await fetch(`${API_BASE}/sentinel/simulate`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            attack_type: type,
+            device_id: deviceId
+          })
+        });
+        const data = await res.json();
+        log(`PROBE CONFIRMED! Threat logged to DB -> Check Primary SOC Dashboard!`);
+      } catch (err) {
+        log(`Simulation error: ${err.message}`);
+      }
+    }
+
+    async function verifyCustomDomain() {
+      const dom = document.getElementById('target-domain-input').value.trim();
+      if (!dom) return;
+      packets++;
+      document.getElementById('disp-packets').textContent = packets;
+      log(`Auditing domain: ${dom}...`);
+      try {
+        const res = await fetch(`${API_BASE}/verify/company`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ domain: dom, device_id: deviceId })
+        });
+        const data = await res.json();
+        log(`VERDICT: ${data.verdict} | Threat Score: ${data.threat_score}/100 [${data.severity}]`);
+      } catch (err) {
+        log(`Audit error: ${err.message}`);
+      }
+    }
+
+    // Auto-register device on load
+    window.addEventListener('DOMContentLoaded', () => {
+      sendTelemetryPing();
+    });
+  </script>
+</body>
+</html>
