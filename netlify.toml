@@ -23,7 +23,7 @@
 
 [[redirects]]
   from = "/github"
-  to = "https://github.com/aaryajmenon27/vora-sentinel-cybersecurity-soc"
+  to = "https://github.com/aaryajmenon/vora-sentinel-cybersecurity-soc"
   status = 302
   force = true
 

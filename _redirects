@@ -1,4 +1,4 @@
-/github   https://github.com/aaryajmenon27/vora-sentinel-cybersecurity-soc   302!
+/github   https://github.com/aaryajmenon/vora-sentinel-cybersecurity-soc   302!
 /report   /VORA_Sentinel_Level5_Cybersecurity_Project_Report.pdf             302!
 /api/*    /.netlify/functions/api/:splat                                     200
 /*        /index.html                                                        200

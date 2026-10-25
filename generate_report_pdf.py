@@ -177,7 +177,7 @@ def build_pdf(filename="VORA_Sentinel_Level5_Cybersecurity_Project_Report.pdf"):
         [Paragraph("<b>Live Deployed Platform URL:</b>", body_style), Paragraph("https://voragenofficial.netlify.app", body_style)],
         [Paragraph("<b>Live Cloud REST API Gateway:</b>", body_style), Paragraph("https://voragenofficial.netlify.app/api/health", body_style)],
         [Paragraph("<b>Mobile Node Probe Client:</b>", body_style), Paragraph("https://voragenofficial.netlify.app/mobile-node.html", body_style)],
-        [Paragraph("<b>GitHub Repository URL:</b>", body_style), Paragraph("https://github.com/aaryajmenon27/vora-sentinel-cybersecurity-soc", body_style)],
+        [Paragraph("<b>GitHub Repository URL:</b>", body_style), Paragraph("https://github.com/aaryajmenon/vora-sentinel-cybersecurity-soc", body_style)],
         [Paragraph("<b>Database Layer:</b>", body_style), Paragraph("Persistent Relational SQLite (vora_sentinel.db) / Cloud Atlas", body_style)],
         [Paragraph("<b>Academic Submission Year:</b>", body_style), Paragraph("2026 Final Semester Capstone Evaluation", body_style)]
     ]
@@ -391,7 +391,7 @@ def build_pdf(filename="VORA_Sentinel_Level5_Cybersecurity_Project_Report.pdf"):
     story.append(Spacer(1, 10))
     story.append(Paragraph("9. GitHub Repository & Final Submission Access", h1_style))
     story.append(HRFlowable(width="100%", thickness=1.5, color=c_primary, spaceBefore=2, spaceAfter=8))
-    story.append(Paragraph("• <b>GitHub Repository:</b> <a href='https://github.com/aaryajmenon27/vora-sentinel-cybersecurity-soc'>https://github.com/aaryajmenon27/vora-sentinel-cybersecurity-soc</a>", body_style))
+    story.append(Paragraph("• <b>GitHub Repository:</b> <a href='https://github.com/aaryajmenon/vora-sentinel-cybersecurity-soc'>https://github.com/aaryajmenon/vora-sentinel-cybersecurity-soc</a>", body_style))
     story.append(Paragraph("• <b>Live Website Redirect:</b> Visiting <code>https://voragenofficial.netlify.app/github</code> automatically redirects to the GitHub repository.", body_style))
     story.append(Paragraph("• <b>Project Report PDF Direct Download:</b> Available at <code>https://voragenofficial.netlify.app/VORA_Sentinel_Level5_Cybersecurity_Project_Report.pdf</code>", body_style))
 
