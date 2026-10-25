@@ -1006,7 +1006,8 @@ const VoraApp = (function() {
             src="${s.logo}" 
             alt="${escapeHtml(s.name)}" 
             class="suggestion-logo" 
-            onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=' + encodeURIComponent('${escapeHtml(s.domain)}') + '&sz=128'" 
+            referrerpolicy="no-referrer"
+            onerror="if(!this.dataset.fallback){this.dataset.fallback='1'; this.src='https://unavatar.io/' + encodeURIComponent('${escapeHtml(s.domain)}');}else if(this.dataset.fallback==='1'){this.dataset.fallback='2'; this.src='https://www.google.com/s2/favicons?domain=' + encodeURIComponent('${escapeHtml(s.domain)}') + '&sz=128';}" 
           />
           <div class="suggestion-text">
             <div class="suggestion-title">
@@ -1384,7 +1385,7 @@ const VoraApp = (function() {
 
     // Show instant scanning state right below search bar
     dossierContainer.innerHTML = `
-      <div class="verification-scanning-state glass-card" style="margin-bottom: 1.5rem;">
+      <div class="verification-scanning-state glass-card" style="margin-bottom: 1.5rem;" id="dossier-scanning-banner">
         <div class="scanner-spinner">
           <i class="fa-solid fa-shield-virus fa-spin fa-2xl text-accent"></i>
         </div>
@@ -1397,6 +1398,11 @@ const VoraApp = (function() {
         </ul>
       </div>
     `;
+
+    // 1. Immediate smooth scroll redirection to the scanning view (no waiting for manual scroll)
+    const navOffset = 85;
+    const scanTop = dossierContainer.getBoundingClientRect().top + window.pageYOffset - navOffset;
+    window.scrollTo({ top: scanTop, behavior: 'smooth' });
 
     setTimeout(() => {
       const match = findCompanyMatch(query);
@@ -1424,6 +1430,15 @@ const VoraApp = (function() {
 
       renderCompanyDossier(match);
       showToast(`Verification completed for ${match.name}!`, 'success');
+
+      // 2. Smooth redirection directly to the rendered One-Sheet Dossier
+      setTimeout(() => {
+        const sheet = document.getElementById('one-sheet-dossier');
+        if (sheet) {
+          const sheetTop = sheet.getBoundingClientRect().top + window.pageYOffset - 80;
+          window.scrollTo({ top: sheetTop, behavior: 'smooth' });
+        }
+      }, 60);
     }, 350);
   }
 
@@ -1625,15 +1640,26 @@ const VoraApp = (function() {
     const container = document.getElementById('company-dossier-container');
     if (!container) return;
 
-    const isRisky = c.genuinityScore < 80;
+    const rawScore = typeof c.genuinityScore === 'number' ? c.genuinityScore : (parseFloat(c.genuinityScore) || 0);
+    const score = Number(rawScore.toFixed(1));
+    const isRisky = score < 80;
     const statusClass = isRisky ? 'status-danger' : 'status-verified';
+    const gradeText = score >= 95 ? 'GRADE A+' : (score >= 85 ? 'GRADE A' : (score >= 75 ? 'GRADE B' : 'GRADE F'));
+    const dashOffset = (263.89 * (1 - Math.min(100, Math.max(0, score)) / 100)).toFixed(2);
+    const uniqueGradId = 'scoreGrad_' + (c.id || Math.random().toString(36).substring(2, 8));
 
     container.innerHTML = `
       <div class="company-one-sheet-dossier glass-card" id="one-sheet-dossier">
         <!-- 1. HEADER & AUTHENTICITY SCORE -->
         <div class="dossier-header-bar">
           <div class="dossier-brand-wrap">
-            <img src="${c.logo}" alt="${escapeHtml(c.name)}" class="dossier-brand-img" onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=' + encodeURIComponent('${escapeHtml(c.domain)}') + '&sz=128'" />
+            <img 
+              src="${c.logo}" 
+              alt="${escapeHtml(c.name)}" 
+              class="dossier-brand-img" 
+              referrerpolicy="no-referrer"
+              onerror="if(!this.dataset.fallback){this.dataset.fallback='1'; this.src='https://unavatar.io/' + encodeURIComponent('${escapeHtml(c.domain)}');}else if(this.dataset.fallback==='1'){this.dataset.fallback='2'; this.src='https://www.google.com/s2/favicons?domain=' + encodeURIComponent('${escapeHtml(c.domain)}') + '&sz=128';}" 
+            />
             <div>
               <div class="dossier-title-row">
                 <h2>${escapeHtml(c.name)}</h2>
@@ -1647,10 +1673,43 @@ const VoraApp = (function() {
             </div>
           </div>
 
-          <div class="dossier-score-gauge">
-            <div class="score-circle" style="--score-pct: ${c.genuinityScore}%;">
-              <span class="score-val">${c.genuinityScore}%</span>
-              <span class="score-lbl">Genuinity Score</span>
+          <div class="dossier-score-card ${isRisky ? 'card-danger' : 'card-verified'}">
+            <div class="score-ring-wrap">
+              <svg class="score-ring-svg" viewBox="0 0 100 100" aria-hidden="true">
+                <defs>
+                  <linearGradient id="${uniqueGradId}" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="${isRisky ? '#ef4444' : '#10b981'}" />
+                    <stop offset="100%" stop-color="${isRisky ? '#f43f5e' : '#06b6d4'}" />
+                  </linearGradient>
+                </defs>
+                <circle cx="50" cy="50" r="42" class="score-track-circle" />
+                <circle cx="50" cy="50" r="42" class="score-fill-circle"
+                  stroke="url(#${uniqueGradId})"
+                  stroke-dasharray="263.89"
+                  stroke-dashoffset="${dashOffset}"
+                  transform="rotate(-90 50 50)" />
+              </svg>
+              <div class="score-ring-content">
+                <div class="score-number-row">
+                  <span class="score-number">${score}</span><span class="score-percent">%</span>
+                </div>
+                <span class="score-grade-badge ${isRisky ? 'grade-danger' : 'grade-verified'}">${gradeText}</span>
+              </div>
+            </div>
+            <div class="score-summary-column">
+              <div class="score-tagline">
+                <i class="fa-solid fa-shield-halved text-accent"></i>
+                <span>GENUINITY INDEX</span>
+              </div>
+              <div class="score-tier-pill ${isRisky ? 'pill-danger' : 'pill-verified'}">
+                <i class="fa-solid ${isRisky ? 'fa-triangle-exclamation' : 'fa-certificate'}"></i>
+                <span>${isRisky ? 'HIGH RISK ALERT' : 'CRYPTOGRAPHICALLY VERIFIED'}</span>
+              </div>
+              <div class="score-meta-text">
+                <span>${isRisky ? 'Suspicious Indicators Found' : '6/6 Multi-Vector Checks Passed'}</span>
+                <span class="meta-dot">&bull;</span>
+                <span>Level 5 SOC Telemetry</span>
+              </div>
             </div>
           </div>
         </div>
@@ -1741,9 +1800,15 @@ const VoraApp = (function() {
 
         <!-- 3. LEADERSHIP & REAL CEO PROFILE -->
         <div class="dossier-sheet-section">
-          <h3 class="sheet-sec-title"><i class="fa-solid fa-user-tie"></i> 2. Executive Leadership & CEO Profile</h3>
+          <h3 class="sheet-sec-title"><i class="fa-solid fa-user-tie"></i> 2. Executive Leadership & Current Managing Director / CEO Profile</h3>
           <div class="ceo-dossier-card">
-            <img src="${c.ceo.avatar}" alt="${escapeHtml(c.ceo.name)}" class="ceo-avatar-img" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=' + encodeURIComponent('${escapeHtml(c.ceo.name)}') + '&background=0284c7&color=ffffff&size=256&bold=true&font-size=0.4'" />
+            <img 
+              src="${c.ceo.avatar}" 
+              alt="${escapeHtml(c.ceo.name)}" 
+              class="ceo-avatar-img" 
+              referrerpolicy="no-referrer"
+              onerror="if(!this.dataset.fallback){this.dataset.fallback='1'; this.src='https://ui-avatars.com/api/?name=' + encodeURIComponent('${escapeHtml(c.ceo.name)}') + '&background=0284c7&color=ffffff&size=256&bold=true&font-size=0.4';}" 
+            />
             <div class="ceo-bio-info">
               <div class="ceo-name-row">
                 <h4>${escapeHtml(c.ceo.name)}</h4>

@@ -1,13 +1,17 @@
-# LEVEL 5 CYBERSECURITY PROJECT REPORT
-## VORA SENTINEL: Autonomous Phishing Interception, Recruitment Fraud Threat Intelligence & Multi-Node Endpoint Intrusion Detection System (IDS/SOC)
+# VORA GENERATION
+## Autonomous Recruitment Verification, Phishing Interception & Endpoint Cybersecurity System (Level 5 Capstone Project)
 
-**Course:** Level 5 Cybersecurity Full Stack Engineering  
-**Academic Semester:** Final Semester Capstone Project  
+**Candidate Name:** Aarya J Menon  
+**Candidate Email:** aaryajmenon27@gmail.com  
+**Course & Qualification:** Level 5 Cybersecurity Full Stack Engineering  
+**Academic Semester:** Final Semester Capstone Evaluation (2026)  
 **Live Deployed Platform URL:** [https://voragenofficial.netlify.app](https://voragenofficial.netlify.app)  
-**Live REST API Gateway:** [https://voragenofficial.netlify.app/api](https://voragenofficial.netlify.app/api)  
-**External Mobile Node Probe:** [https://voragenofficial.netlify.app/mobile-node.html](https://voragenofficial.netlify.app/mobile-node.html)  
+**Live Relational Database Explorer:** [https://voragenofficial.netlify.app/database](https://voragenofficial.netlify.app/database)  
+**Live Cloud REST API Gateway:** [https://voragenofficial.netlify.app/api/health](https://voragenofficial.netlify.app/api/health)  
+**External Mobile Node Probe Client:** [https://voragenofficial.netlify.app/mobile-node.html](https://voragenofficial.netlify.app/mobile-node.html)  
+**GitHub Source Repository:** [https://github.com/aaryajmenon/vora-sentinel-cybersecurity-soc](https://github.com/aaryajmenon/vora-sentinel-cybersecurity-soc)  
 **Local Gateway (VS Code):** `http://localhost:5000/api`  
-**Classification:** Academic Open Research & Engineering Defense  
+**Classification:** Academic Open Research & Engineering Defense Submission  
 
 ---
 

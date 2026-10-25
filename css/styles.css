@@ -1085,11 +1085,173 @@ body {
   align-items: center;
 }
 
+/* Redesigned Forensic Genuinity Score Meter */
+.dossier-score-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.9rem 1.4rem;
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  min-width: 290px;
+}
+
+.dossier-score-card.card-verified {
+  border-color: rgba(16, 185, 129, 0.35);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.12), inset 0 0 20px rgba(16, 185, 129, 0.05);
+}
+
+.dossier-score-card.card-danger {
+  border-color: rgba(239, 68, 68, 0.45);
+  box-shadow: 0 10px 30px rgba(239, 68, 68, 0.15), inset 0 0 20px rgba(239, 68, 68, 0.08);
+}
+
+.score-ring-wrap {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-ring-svg {
+  width: 96px;
+  height: 96px;
+  transform: rotate(0deg);
+}
+
+.score-track-circle {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 7.5;
+}
+
+.score-fill-circle {
+  fill: none;
+  stroke-width: 7.5;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.score-ring-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+.score-number-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  line-height: 1;
+}
+
+.score-number {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.score-percent {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-left: 1px;
+}
+
+.score-grade-badge {
+  font-size: 0.58rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 1px 6px;
+  border-radius: var(--radius-full);
+  margin-top: 3px;
+}
+
+.score-grade-badge.grade-verified {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+.score-grade-badge.grade-danger {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+.score-summary-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.score-tagline {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.score-tier-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  width: fit-content;
+}
+
+.score-tier-pill.pill-verified {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.score-tier-pill.pill-danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+}
+
+.score-meta-text {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.meta-dot {
+  opacity: 0.6;
+}
+
+/* Fallback score-circle for backward compatibility */
 .score-circle {
   width: 96px;
   height: 96px;
   border-radius: 50%;
-  background: conic-gradient(var(--accent-primary) var(--score-pct), var(--border-color) 0);
+  background: conic-gradient(var(--accent-primary) var(--score-pct, 95%), var(--border-color) 0);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3279,6 +3441,10 @@ textarea.form-control {
   }
   .dossier-score-gauge {
     align-self: center;
+  }
+  .dossier-score-card {
+    width: 100%;
+    justify-content: center;
   }
   .dossier-stats-strip {
     grid-template-columns: 1fr;

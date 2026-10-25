@@ -22,6 +22,21 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[redirects]]
+  from = "/database"
+  to = "/database-explorer.html"
+  status = 200
+
+[[redirects]]
+  from = "/db"
+  to = "/database-explorer.html"
+  status = 200
+
+[[redirects]]
+  from = "/database-explorer"
+  to = "/database-explorer.html"
+  status = 200
+
+[[redirects]]
   from = "/github"
   to = "https://github.com/aaryajmenon/vora-sentinel-cybersecurity-soc"
   status = 302

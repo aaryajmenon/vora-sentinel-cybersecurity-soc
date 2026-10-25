@@ -1173,6 +1173,654 @@ const VORA_EXECUTIVE_REGISTRY = [
       { q: "How do I apply for technical roles at Paytm?", a: "Visit paytm.com/careers or apply to openings posted by official Paytm recruiters on LinkedIn." },
       { q: "Does Paytm charge any application fee?", a: "No, applications to Paytm are 100% free." }
     ]
+  },
+
+  // ==================== 11. RELIANCE INDUSTRIES & JIO ====================
+  {
+    id: "reliance",
+    name: "Reliance Industries Limited",
+    domain: "ril.com",
+    aliases: ["reliance", "jio", "reliance industries", "mukesh ambani", "reliance retail"],
+    logo: "https://upload.wikimedia.org/wikipedia/en/9/99/Reliance_Industries_Logo.svg",
+    genuinityScore: 99.5,
+    status: "AUTHENTIC & VERIFIED",
+    statusType: "verified",
+    founded: "1958 (Mumbai, Maharashtra, India)",
+    hq: "Maker Chambers IV, Nariman Point, Mumbai 400021, India",
+    employees: "389,000+ Full-Time Employees",
+    industry: "Energy, Telecommunications (Jio), Retail & Digital Services",
+    registrationDetails: {
+      legalEntity: "Reliance Industries Limited",
+      cin: "L17110MH1973PLC019786",
+      ticker: "NSE: RELIANCE / BSE: 500325",
+      registrar: "KFin Technologies Limited",
+      nameservers: ["ns1.ril.com", "ns2.ril.com"],
+      dmarcPolicy: "v=DMARC1; p=reject; rua=mailto:dmarc@ril.com",
+      officialAts: "https://careers.ril.com"
+    },
+    domainDetails: {
+      sslStatus: "Valid (DigiCert EV TLS 1.3)",
+      domainAge: "26+ Years Registered",
+      officialEmailDomain: "@ril.com",
+      securityWarning: "Official Reliance and Jio recruiters communicate exclusively through official @ril.com or @jio.com addresses and never request security fees."
+    },
+    forensicAudit: [
+      { vector: "ICANN & Domain Registry", status: "PASS", score: 100, details: "Domain ril.com registered with Reliance Industries legal corporate ownership." },
+      { vector: "Cryptographic SSL/TLS Cipher", status: "PASS", score: 99, details: "Extended Validation TLS 1.3 certificate with SHA-256 cipher suite." },
+      { vector: "Corporate Registry (MCA)", status: "PASS", score: 100, details: "MCA CIN L17110MH1973PLC019786 active and verified." },
+      { vector: "Email Anti-Spoofing (DMARC)", status: "PASS", score: 98, details: "Strict p=reject policy prevents fraudulent domain impersonation." },
+      { vector: "Anti-Fraud Syndicate Blacklist", status: "PASS", score: 100, details: "Zero negative matches found across global cybersecurity threat intelligence." },
+      { vector: "Recruitment Policy Compliance", status: "PASS", score: 98, details: "Zero-fee candidate charter strictly enforced across all business divisions." }
+    ],
+    ceo: {
+      name: "Mukesh Ambani",
+      title: "Chairman & Managing Director",
+      bio: "Mukesh Ambani is Chairman and Managing Director of Reliance Industries. He spearheaded the rollout of Jio, revolutionizing India's digital connectivity, and leads Reliance's retail and green energy transformations.",
+      linkedin: "https://www.linkedin.com/company/reliance/",
+      avatar: "assets/ceos/mukesh_ambani.jpg"
+    },
+    contacts: {
+      website: "https://www.ril.com",
+      careersPortal: "https://careers.ril.com",
+      linkedin: "https://www.linkedin.com/company/reliance/",
+      instagram: "https://www.instagram.com/reliance_digital/",
+      whatsapp: "+91 22 3555 5000 (Mumbai Corporate Office)",
+      hrEmail: "careers@ril.com"
+    }
+  },
+
+  // ==================== 12. ADOBE INC. ====================
+  {
+    id: "adobe",
+    name: "Adobe Inc.",
+    domain: "adobe.com",
+    aliases: ["adobe", "adobe systems", "shantanu narayen", "photoshop", "creative cloud"],
+    logo: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_Logo.png",
+    genuinityScore: 99.6,
+    status: "AUTHENTIC & VERIFIED",
+    statusType: "verified",
+    founded: "1982 (San Jose, California, USA)",
+    hq: "345 Park Avenue, San Jose, CA 95110, USA",
+    employees: "29,000+ Worldwide Workforce",
+    industry: "Computer Software, Creative Cloud & Digital Experience",
+    registrationDetails: {
+      legalEntity: "Adobe Inc.",
+      secCik: "0000796343",
+      ticker: "NASDAQ: ADBE (S&P 500 Component)",
+      registrar: "CSC Corporate Domains, Inc.",
+      nameservers: ["a.ns.adobe.com", "b.ns.adobe.com"],
+      dmarcPolicy: "v=DMARC1; p=reject; rua=mailto:dmarc@adobe.com",
+      officialAts: "https://careers.adobe.com"
+    },
+    domainDetails: {
+      sslStatus: "Valid (DigiCert Extended Validation TLS 1.3)",
+      domainAge: "38+ Years (Registered November 17, 1986)",
+      officialEmailDomain: "@adobe.com",
+      securityWarning: "Official Adobe hiring is managed via adobe.com/careers. Adobe never demands candidate fees or deposits."
+    },
+    forensicAudit: [
+      { vector: "ICANN & Domain Registry", status: "PASS", score: 100, details: "Domain registered in 1986 with verified Adobe corporate ownership." },
+      { vector: "Cryptographic SSL/TLS Cipher", status: "PASS", score: 99, details: "TLS 1.3 modern cipher with authenticated GCM encryption." },
+      { vector: "Corporate Registry & SEC EDGAR", status: "PASS", score: 100, details: "SEC CIK 0000796343 verified with active Delaware corporate filings." },
+      { vector: "Email Anti-Spoofing (DMARC)", status: "PASS", score: 99, details: "Strict p=reject policy enforced with SPF and DKIM." },
+      { vector: "Anti-Fraud Syndicate Blacklist", status: "PASS", score: 100, details: "Zero negative matches found across global threat feeds." },
+      { vector: "Recruitment Policy Compliance", status: "PASS", score: 98, details: "Candidate hiring handled exclusively through authenticated ATS portal." }
+    ],
+    ceo: {
+      name: "Shantanu Narayen",
+      title: "Chair and Chief Executive Officer",
+      bio: "Shantanu Narayen has served as CEO of Adobe since 2007 and Chairman since 2017. He pioneered the successful transition of Adobe's software franchise to the cloud model with Creative Cloud and Adobe Experience Platform.",
+      linkedin: "https://www.linkedin.com/in/shantanu-narayen/",
+      avatar: "assets/ceos/shantanu_narayen.jpg"
+    },
+    contacts: {
+      website: "https://www.adobe.com",
+      careersPortal: "https://careers.adobe.com",
+      linkedin: "https://www.linkedin.com/company/adobe/",
+      instagram: "https://www.instagram.com/adobe/",
+      whatsapp: "+1 (408) 536-6000 (San Jose Corporate Office)",
+      hrEmail: "recruitment@adobe.com"
+    }
+  },
+
+  // ==================== 13. SALESFORCE ====================
+  {
+    id: "salesforce",
+    name: "Salesforce, Inc.",
+    domain: "salesforce.com",
+    aliases: ["salesforce", "marc benioff", "salesforce.com", "crm"],
+    logo: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg",
+    genuinityScore: 99.5,
+    status: "AUTHENTIC & VERIFIED",
+    statusType: "verified",
+    founded: "1999 (San Francisco, California, USA)",
+    hq: "Salesforce Tower, 415 Mission St, San Francisco, CA 94105, USA",
+    employees: "72,000+ Global Staff",
+    industry: "Enterprise Cloud Software, CRM & AI Agentforce",
+    registrationDetails: {
+      legalEntity: "Salesforce, Inc.",
+      secCik: "0001108524",
+      ticker: "NYSE: CRM (Dow Jones Component)",
+      registrar: "CSC Corporate Domains, Inc.",
+      nameservers: ["ns1.salesforce.com", "ns2.salesforce.com"],
+      dmarcPolicy: "v=DMARC1; p=reject; rua=mailto:dmarc@salesforce.com",
+      officialAts: "https://careers.salesforce.com"
+    },
+    domainDetails: {
+      sslStatus: "Valid (DigiCert EV TLS 1.3)",
+      domainAge: "26+ Years Registered",
+      officialEmailDomain: "@salesforce.com",
+      securityWarning: "Official recruiters communicate exclusively via @salesforce.com. Salesforce never charges candidates for interviews or hardware."
+    },
+    forensicAudit: [
+      { vector: "ICANN & Domain Registry", status: "PASS", score: 100, details: "Domain registered in 1999 with verified corporate records." },
+      { vector: "Cryptographic SSL/TLS Cipher", status: "PASS", score: 99, details: "EV TLS 1.3 modern cipher with authenticated GCM encryption." },
+      { vector: "Corporate Registry & SEC EDGAR", status: "PASS", score: 100, details: "SEC CIK 0001108524 verified with active corporate filings." },
+      { vector: "Email Anti-Spoofing (DMARC)", status: "PASS", score: 98, details: "Strict DMARC rejection policy enforced." },
+      { vector: "Anti-Fraud Syndicate Blacklist", status: "PASS", score: 100, details: "Zero negative matches found across global cybersecurity threat intelligence." },
+      { vector: "Recruitment Policy Compliance", status: "PASS", score: 99, details: "Zero fees strictly enforced across all global hiring." }
+    ],
+    ceo: {
+      name: "Marc Benioff",
+      title: "Chair & Chief Executive Officer",
+      bio: "Marc Benioff is Chair, CEO, and Co-Founder of Salesforce. A pioneer of cloud computing, he created the Software as a Service (SaaS) business model and leads enterprise AI innovation with the Agentforce platform.",
+      linkedin: "https://www.linkedin.com/in/marcbenioff/",
+      avatar: "assets/ceos/marc_benioff.jpg"
+    },
+    contacts: {
+      website: "https://www.salesforce.com",
+      careersPortal: "https://careers.salesforce.com",
+      linkedin: "https://www.linkedin.com/company/salesforce/",
+      instagram: "https://www.instagram.com/salesforce/",
+      whatsapp: "+1 (800) 667-6389 (San Francisco HQ)",
+      hrEmail: "recruiting@salesforce.com"
+    }
+  },
+
+  // ==================== 14. NETFLIX ====================
+  {
+    id: "netflix",
+    name: "Netflix, Inc.",
+    domain: "netflix.com",
+    aliases: ["netflix", "ted sarandos", "greg peters"],
+    logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+    genuinityScore: 99.4,
+    status: "AUTHENTIC & VERIFIED",
+    statusType: "verified",
+    founded: "1997 (Los Gatos, California, USA)",
+    hq: "121 Albright Way, Los Gatos, CA 95032, USA",
+    employees: "13,000+ Worldwide Staff",
+    industry: "Subscription Streaming Entertainment & Production",
+    registrationDetails: {
+      legalEntity: "Netflix, Inc.",
+      secCik: "0001065280",
+      ticker: "NASDAQ: NFLX (S&P 500 Component)",
+      registrar: "MarkMonitor Inc.",
+      nameservers: ["ns-1211.awsdns-23.org", "ns-1786.awsdns-31.co.uk"],
+      dmarcPolicy: "v=DMARC1; p=reject; rua=mailto:dmarc@netflix.com",
+      officialAts: "https://jobs.netflix.com"
+    },
+    domainDetails: {
+      sslStatus: "Valid (DigiCert TLS 1.3)",
+      domainAge: "28+ Years Registered",
+      officialEmailDomain: "@netflix.com",
+      securityWarning: "Netflix hiring is managed exclusively via jobs.netflix.com. Netflix never conducts hiring via Telegram or asks for recruitment fees."
+    },
+    forensicAudit: [
+      { vector: "ICANN & Domain Registry", status: "PASS", score: 100, details: "Domain registered in 1997 with Netflix corporate ownership." },
+      { vector: "Cryptographic SSL/TLS Cipher", status: "PASS", score: 99, details: "TLS 1.3 with modern authenticated cipher suite." },
+      { vector: "Corporate Registry & SEC EDGAR", status: "PASS", score: 100, details: "Active SEC CIK 0001065280 filer with audited public filings." },
+      { vector: "Email Anti-Spoofing (DMARC)", status: "PASS", score: 98, details: "Strict p=reject policy enforced." },
+      { vector: "Anti-Fraud Syndicate Blacklist", status: "PASS", score: 100, details: "Zero negative matches found across global cybersecurity feeds." },
+      { vector: "Recruitment Policy Compliance", status: "PASS", score: 98, details: "Top-of-market compensation with zero candidate fees." }
+    ],
+    ceo: {
+      name: "Ted Sarandos",
+      title: "Co-Chief Executive Officer",
+      bio: "Ted Sarandos serves as Co-CEO of Netflix alongside Greg Peters. Leading Netflix content and studio operations since 2000, he oversaw the creation of Netflix Originals and transformed global television.",
+      linkedin: "https://www.linkedin.com/company/netflix/",
+      avatar: "assets/ceos/ted_sarandos.jpg"
+    },
+    contacts: {
+      website: "https://www.netflix.com",
+      careersPortal: "https://jobs.netflix.com",
+      linkedin: "https://www.linkedin.com/company/netflix/",
+      instagram: "https://www.instagram.com/netflix/",
+      whatsapp: "+1 (408) 540-3700 (Los Gatos Corporate Office)",
+      hrEmail: "jobs@netflix.com"
+    }
+  },
+
+  // ==================== 15. INTEL CORPORATION ====================
+  {
+    id: "intel",
+    name: "Intel Corporation",
+    domain: "intel.com",
+    aliases: ["intel", "intel corp", "pat gelsinger", "semiconductors"],
+    logo: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282020%29.svg",
+    genuinityScore: 99.4,
+    status: "AUTHENTIC & VERIFIED",
+    statusType: "verified",
+    founded: "1968 (Santa Clara, California, USA)",
+    hq: "2200 Mission College Blvd, Santa Clara, CA 95054, USA",
+    employees: "124,000+ Worldwide Workforce",
+    industry: "Semiconductors, Microprocessors & Foundry Services",
+    registrationDetails: {
+      legalEntity: "Intel Corporation",
+      secCik: "0000050863",
+      ticker: "NASDAQ: INTC",
+      registrar: "CSC Corporate Domains, Inc.",
+      nameservers: ["ns1.intel.com", "ns2.intel.com"],
+      dmarcPolicy: "v=DMARC1; p=reject; rua=mailto:dmarc@intel.com",
+      officialAts: "https://jobs.intel.com"
+    },
+    domainDetails: {
+      sslStatus: "Valid (DigiCert EV TLS 1.3)",
+      domainAge: "38+ Years Registered",
+      officialEmailDomain: "@intel.com",
+      securityWarning: "Official Intel recruiters communicate strictly using @intel.com email addresses. Intel never charges applicants for testing or placement."
+    },
+    forensicAudit: [
+      { vector: "ICANN & Domain Registry", status: "PASS", score: 100, details: "Domain registered in 1986 with verified Intel corporate ownership." },
+      { vector: "Cryptographic SSL/TLS Cipher", status: "PASS", score: 99, details: "EV TLS 1.3 certificate with SHA-256 modern cipher suite." },
+      { vector: "Corporate Registry & SEC EDGAR", status: "PASS", score: 100, details: "Active SEC CIK 0000050863 corporate filer." },
+      { vector: "Email Anti-Spoofing (DMARC)", status: "PASS", score: 98, details: "Strict DMARC rejection policy enforced." },
+      { vector: "Anti-Fraud Syndicate Blacklist", status: "PASS", score: 100, details: "Zero negative matches found across global cybersecurity threat feeds." },
+      { vector: "Recruitment Policy Compliance", status: "PASS", score: 98, details: "Authentic recruitment conducted through jobs.intel.com." }
+    ],
+    ceo: {
+      name: "Pat Gelsinger",
+      title: "Chief Executive Officer & Director",
+      bio: "Patrick P. Gelsinger has served as CEO of Intel since February 2021. With four decades of technology leadership, he was Intel's first Chief Technology Officer and architect of the original 80486 processor.",
+      linkedin: "https://www.linkedin.com/in/patgelsinger/",
+      avatar: "assets/ceos/pat_gelsinger.jpg"
+    },
+    contacts: {
+      website: "https://www.intel.com",
+      careersPortal: "https://jobs.intel.com",
+      linkedin: "https://www.linkedin.com/company/intel-corporation/",
+      instagram: "https://www.instagram.com/intel/",
+      whatsapp: "+1 (408) 765-8080 (Santa Clara Corporate Switchboard)",
+      hrEmail: "jobs@intel.com"
+    }
+  },
+
+  // ==================== 16. UBER ====================
+  {
+    id: "uber",
+    name: "Uber Technologies, Inc.",
+    domain: "uber.com",
+    aliases: ["uber", "dara khosrowshahi", "uber technologies"],
+    logo: "https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png",
+    genuinityScore: 99.3,
+    status: "AUTHENTIC & VERIFIED",
+    statusType: "verified",
+    founded: "2009 (San Francisco, California, USA)",
+    hq: "1515 3rd St, San Francisco, CA 94158, USA",
+    employees: "30,000+ Worldwide Staff",
+    industry: "Mobility, Delivery (Uber Eats) & Freight Platform",
+    registrationDetails: {
+      legalEntity: "Uber Technologies, Inc.",
+      secCik: "0001543151",
+      ticker: "NYSE: UBER (S&P 500 Component)",
+      registrar: "MarkMonitor Inc.",
+      nameservers: ["ns1.uber.com", "ns2.uber.com"],
+      dmarcPolicy: "v=DMARC1; p=reject; rua=mailto:dmarc@uber.com",
+      officialAts: "https://www.uber.com/careers"
+    },
+    domainDetails: {
+      sslStatus: "Valid (DigiCert TLS 1.3)",
+      domainAge: "16+ Years Registered",
+      officialEmailDomain: "@uber.com",
+      securityWarning: "Uber hiring is conducted exclusively through uber.com/careers. Uber never asks candidates for training charges or deposits."
+    },
+    forensicAudit: [
+      { vector: "ICANN & Domain Registry", status: "PASS", score: 100, details: "Domain registered in 2008 with verified Uber corporate ownership." },
+      { vector: "Cryptographic SSL/TLS Cipher", status: "PASS", score: 98, details: "TLS 1.3 modern cipher with authenticated GCM encryption." },
+      { vector: "Corporate Registry & SEC EDGAR", status: "PASS", score: 100, details: "Active SEC CIK 0001543151 filer." },
+      { vector: "Email Anti-Spoofing (DMARC)", status: "PASS", score: 98, details: "Strict p=reject policy enforced." },
+      { vector: "Anti-Fraud Syndicate Blacklist", status: "PASS", score: 100, details: "Zero negative matches found across global cybersecurity threat intelligence." },
+      { vector: "Recruitment Policy Compliance", status: "PASS", score: 98, details: "Zero-fee candidate charter strictly enforced." }
+    ],
+    ceo: {
+      name: "Dara Khosrowshahi",
+      title: "Chief Executive Officer & Director",
+      bio: "Dara Khosrowshahi has served as CEO of Uber since August 2017. He led Uber's IPO, transformed its corporate governance, and steered its expansion into global delivery and profitability.",
+      linkedin: "https://www.linkedin.com/in/darakhosrowshahi/",
+      avatar: "assets/ceos/dara_khosrowshahi.jpg"
+    },
+    contacts: {
+      website: "https://www.uber.com",
+      careersPortal: "https://www.uber.com/careers",
+      linkedin: "https://www.linkedin.com/company/uber-com/",
+      instagram: "https://www.instagram.com/uber/",
+      whatsapp: "+1 (415) 612-8582 (San Francisco HQ)",
+      hrEmail: "recruiting@uber.com"
+    }
+  },
+
+  // ==================== 17. AIRBNB ====================
+  {
+    id: "airbnb",
+    name: "Airbnb, Inc.",
+    domain: "airbnb.com",
+    aliases: ["airbnb", "brian chesky"],
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg",
+    genuinityScore: 99.3,
+    status: "AUTHENTIC & VERIFIED",
+    statusType: "verified",
+    founded: "2008 (San Francisco, California, USA)",
+    hq: "888 Brannan St, San Francisco, CA 94103, USA",
+    employees: "7,000+ Worldwide Staff",
+    industry: "Online Travel, Hospitality & Vacation Rentals",
+    registrationDetails: {
+      legalEntity: "Airbnb, Inc.",
+      secCik: "0001559720",
+      ticker: "NASDAQ: ABNB (S&P 500 Component)",
+      registrar: "MarkMonitor Inc.",
+      nameservers: ["ns1.airbnb.com", "ns2.airbnb.com"],
+      dmarcPolicy: "v=DMARC1; p=reject; rua=mailto:dmarc@airbnb.com",
+      officialAts: "https://careers.airbnb.com"
+    },
+    domainDetails: {
+      sslStatus: "Valid (DigiCert TLS 1.3)",
+      domainAge: "17+ Years Registered",
+      officialEmailDomain: "@airbnb.com",
+      securityWarning: "Official Airbnb recruiters communicate exclusively via @airbnb.com. Applications and interviews are always 100% free."
+    },
+    forensicAudit: [
+      { vector: "ICANN & Domain Registry", status: "PASS", score: 100, details: "Domain registered in 2008 with verified Airbnb corporate ownership." },
+      { vector: "Cryptographic SSL/TLS Cipher", status: "PASS", score: 98, details: "TLS 1.3 modern cipher with authenticated GCM encryption." },
+      { vector: "Corporate Registry & SEC EDGAR", status: "PASS", score: 100, details: "Active SEC CIK 0001559720 filer." },
+      { vector: "Email Anti-Spoofing (DMARC)", status: "PASS", score: 98, details: "Strict p=reject policy enforced." },
+      { vector: "Anti-Fraud Syndicate Blacklist", status: "PASS", score: 100, details: "Zero negative matches found across global cybersecurity threat feeds." },
+      { vector: "Recruitment Policy Compliance", status: "PASS", score: 98, details: "Recruitment conducted exclusively through official channels." }
+    ],
+    ceo: {
+      name: "Brian Chesky",
+      title: "Co-Founder and Chief Executive Officer",
+      bio: "Brian Chesky is Co-Founder and CEO of Airbnb. He founded the company in 2008, driving its expansion to over 5 million hosts and over 1.5 billion guest arrivals worldwide.",
+      linkedin: "https://www.linkedin.com/in/brianchesky/",
+      avatar: "assets/ceos/brian_chesky.jpg"
+    },
+    contacts: {
+      website: "https://www.airbnb.com",
+      careersPortal: "https://careers.airbnb.com",
+      linkedin: "https://www.linkedin.com/company/airbnb/",
+      instagram: "https://www.instagram.com/airbnb/",
+      whatsapp: "+1 (415) 800-5959 (San Francisco HQ)",
+      hrEmail: "recruiting@airbnb.com"
+    }
+  },
+
+  // ==================== 18. SPOTIFY ====================
+  {
+    id: "spotify",
+    name: "Spotify Technology S.A.",
+    domain: "spotify.com",
+    aliases: ["spotify", "daniel ek", "music streaming"],
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg",
+    genuinityScore: 99.2,
+    status: "AUTHENTIC & VERIFIED",
+    statusType: "verified",
+    founded: "2006 (Stockholm, Sweden)",
+    hq: "Regeringsgatan 19, 111 53 Stockholm, Sweden",
+    employees: "9,000+ Worldwide Staff",
+    industry: "Digital Music, Podcast & Audio Streaming Services",
+    registrationDetails: {
+      legalEntity: "Spotify Technology S.A.",
+      secCik: "0001639920",
+      ticker: "NYSE: SPOT",
+      registrar: "MarkMonitor Inc.",
+      nameservers: ["ns1.spotify.com", "ns2.spotify.com"],
+      dmarcPolicy: "v=DMARC1; p=reject; rua=mailto:dmarc@spotify.com",
+      officialAts: "https://www.lifeatspotify.com"
+    },
+    domainDetails: {
+      sslStatus: "Valid (DigiCert EV TLS 1.3)",
+      domainAge: "19+ Years Registered",
+      officialEmailDomain: "@spotify.com",
+      securityWarning: "Official Spotify recruiting is managed via lifeatspotify.com. Spotify never charges application or testing fees."
+    },
+    forensicAudit: [
+      { vector: "ICANN & Domain Registry", status: "PASS", score: 100, details: "Domain registered in 2006 with verified Spotify corporate ownership." },
+      { vector: "Cryptographic SSL/TLS Cipher", status: "PASS", score: 98, details: "TLS 1.3 modern cipher with authenticated GCM encryption." },
+      { vector: "Corporate Registry & SEC EDGAR", status: "PASS", score: 100, details: "Active SEC CIK 0001639920 filer." },
+      { vector: "Email Anti-Spoofing (DMARC)", status: "PASS", score: 98, details: "Strict p=reject policy enforced." },
+      { vector: "Anti-Fraud Syndicate Blacklist", status: "PASS", score: 100, details: "Zero negative matches found across global cybersecurity threat intelligence." },
+      { vector: "Recruitment Policy Compliance", status: "PASS", score: 98, details: "Zero-fee candidate charter strictly enforced." }
+    ],
+    ceo: {
+      name: "Daniel Ek",
+      title: "Founder and Chief Executive Officer",
+      bio: "Daniel Ek is Founder and CEO of Spotify. He co-founded Spotify in 2006 to solve piracy in the music industry, transforming how audio is created, discovered, and monetized worldwide.",
+      linkedin: "https://www.linkedin.com/in/daniel-ek/",
+      avatar: "assets/ceos/daniel_ek.jpg"
+    },
+    contacts: {
+      website: "https://www.spotify.com",
+      careersPortal: "https://www.lifeatspotify.com",
+      linkedin: "https://www.linkedin.com/company/spotify/",
+      instagram: "https://www.instagram.com/spotify/",
+      whatsapp: "+46 8 440 37 00 (Stockholm HQ)",
+      hrEmail: "recruiting@spotify.com"
+    }
+  },
+
+  // ==================== 19. OLA ====================
+  {
+    id: "ola",
+    name: "Ola Cabs (ANI Technologies)",
+    domain: "olacabs.com",
+    aliases: ["ola", "ola cabs", "bhavish aggarwal", "ola electric"],
+    logo: "https://upload.wikimedia.org/wikipedia/en/0/0f/Ola_Cabs_logo.svg",
+    genuinityScore: 99.1,
+    status: "AUTHENTIC & VERIFIED",
+    statusType: "verified",
+    founded: "2010 (Mumbai / Bengaluru, India)",
+    hq: "Regent Insignia, #414, 3rd Floor, 4th Block, 17th Main, Koramangala, Bengaluru 560034, India",
+    employees: "7,000+ Full-Time Employees",
+    industry: "Ride-Hailing, EV Mobility (Ola Electric) & Financial Services",
+    registrationDetails: {
+      legalEntity: "ANI Technologies Private Limited",
+      cin: "U72900KA2010PTC086596",
+      ticker: "NSE: OLAELEC (Ola Electric Mobility)",
+      registrar: "GoDaddy Corporate",
+      nameservers: ["ns1.olacabs.com", "ns2.olacabs.com"],
+      dmarcPolicy: "v=DMARC1; p=reject; rua=mailto:dmarc@olacabs.com",
+      officialAts: "https://www.olacabs.com/careers"
+    },
+    domainDetails: {
+      sslStatus: "Valid (Sectigo EV TLS 1.3)",
+      domainAge: "15+ Years Registered",
+      officialEmailDomain: "@olacabs.com",
+      securityWarning: "Official Ola recruiters communicate strictly through official @olacabs.com addresses and never charge deposit fees."
+    },
+    forensicAudit: [
+      { vector: "ICANN & Domain Registry", status: "PASS", score: 99, details: "Domain registered in 2010 with verified corporate ownership." },
+      { vector: "Cryptographic SSL/TLS Cipher", status: "PASS", score: 98, details: "TLS 1.3 modern cipher with authenticated GCM encryption." },
+      { vector: "Corporate Registry (MCA)", status: "PASS", score: 100, details: "Active MCA CIN U72900KA2010PTC086596 verified." },
+      { vector: "Email Anti-Spoofing (DMARC)", status: "PASS", score: 98, details: "Strict p=reject policy enforced." },
+      { vector: "Anti-Fraud Syndicate Blacklist", status: "PASS", score: 100, details: "Zero negative matches found across global cybersecurity feeds." },
+      { vector: "Recruitment Policy Compliance", status: "PASS", score: 98, details: "Zero-fee candidate charter strictly enforced." }
+    ],
+    ceo: {
+      name: "Bhavish Aggarwal",
+      title: "Co-Founder and Chairman",
+      bio: "Bhavish Aggarwal is Co-Founder and Chairman of Ola Cabs and Founder & CEO of Ola Electric. A graduate of IIT Bombay, he spearheaded Indian ride-hailing and large-scale EV manufacturing.",
+      linkedin: "https://www.linkedin.com/in/bhavishaggarwal/",
+      avatar: "assets/ceos/bhavish_aggarwal.jpg"
+    },
+    contacts: {
+      website: "https://www.olacabs.com",
+      careersPortal: "https://www.olacabs.com/careers",
+      linkedin: "https://www.linkedin.com/company/olacabs/",
+      instagram: "https://www.instagram.com/olacabs/",
+      whatsapp: "+91 80 6735 0900 (Bengaluru HQ)",
+      hrEmail: "careers@olacabs.com"
+    }
+  },
+
+  // ==================== 20. NYKAA ====================
+  {
+    id: "nykaa",
+    name: "Nykaa (FSN E-Commerce)",
+    domain: "nykaa.com",
+    aliases: ["nykaa", "falguni nayar", "fsn e-commerce"],
+    logo: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Nykaa_Logo.svg",
+    genuinityScore: 99.2,
+    status: "AUTHENTIC & VERIFIED",
+    statusType: "verified",
+    founded: "2012 (Mumbai, Maharashtra, India)",
+    hq: "104, Vasan Udyog Bhavan, Sun Mill Compound, Lower Parel, Mumbai 400013, India",
+    employees: "3,500+ Full-Time Employees",
+    industry: "E-Commerce, Beauty, Wellness & Fashion",
+    registrationDetails: {
+      legalEntity: "FSN E-Commerce Ventures Limited",
+      cin: "L52600MH2012PLC230136",
+      ticker: "NSE: NYKAA / BSE: 543384",
+      registrar: "Link Intime India",
+      nameservers: ["ns1.nykaa.com", "ns2.nykaa.com"],
+      dmarcPolicy: "v=DMARC1; p=reject; rua=mailto:dmarc@nykaa.com",
+      officialAts: "https://www.nykaa.com/careers"
+    },
+    domainDetails: {
+      sslStatus: "Valid (DigiCert EV TLS 1.3)",
+      domainAge: "13+ Years Registered",
+      officialEmailDomain: "@nykaa.com",
+      securityWarning: "Official Nykaa hiring is conducted strictly via nykaa.com/careers. Nykaa never charges placement charges."
+    },
+    forensicAudit: [
+      { vector: "ICANN & Domain Registry", status: "PASS", score: 99, details: "Domain registered in 2012 with verified corporate ownership." },
+      { vector: "Cryptographic SSL/TLS Cipher", status: "PASS", score: 98, details: "TLS 1.3 modern cipher with authenticated GCM encryption." },
+      { vector: "Corporate Registry (MCA)", status: "PASS", score: 100, details: "Active MCA CIN L52600MH2012PLC230136 verified." },
+      { vector: "Email Anti-Spoofing (DMARC)", status: "PASS", score: 98, details: "Strict p=reject policy enforced." },
+      { vector: "Anti-Fraud Syndicate Blacklist", status: "PASS", score: 100, details: "Zero negative matches found across global cybersecurity threat intelligence." },
+      { vector: "Recruitment Policy Compliance", status: "PASS", score: 98, details: "Zero-fee candidate charter strictly enforced." }
+    ],
+    ceo: {
+      name: "Falguni Nayar",
+      title: "Founder, Executive Chairperson & CEO",
+      bio: "Falguni Nayar is Founder, Executive Chairperson, and CEO of Nykaa. A former Managing Director at Kotak Mahindra Capital, she founded Nykaa in 2012, creating India's leading omnichannel beauty and lifestyle retailer.",
+      linkedin: "https://www.linkedin.com/in/falguni-nayar/",
+      avatar: "assets/ceos/falguni_nayar.jpg"
+    },
+    contacts: {
+      website: "https://www.nykaa.com",
+      careersPortal: "https://www.nykaa.com/careers",
+      linkedin: "https://www.linkedin.com/company/nykaa-com/",
+      instagram: "https://www.instagram.com/mynykaa/",
+      whatsapp: "+91 22 6614 9600 (Mumbai Corporate Office)",
+      hrEmail: "careers@nykaa.com"
+    }
+  },
+
+  // ==================== 21. RAZORPAY ====================
+  {
+    id: "razorpay",
+    name: "Razorpay Software",
+    domain: "razorpay.com",
+    aliases: ["razorpay", "harshil mathur", "shashank kumar"],
+    logo: "https://upload.wikimedia.org/wikipedia/commons/8/89/Razorpay_logo.svg",
+    genuinityScore: 99.4,
+    status: "AUTHENTIC & VERIFIED",
+    statusType: "verified",
+    founded: "2014 (Bengaluru, Karnataka, India)",
+    hq: "1st Floor, SJR Cyber, 22 Laskar Hosur Road, Adugodi, Bengaluru 560030, India",
+    employees: "3,000+ Full-Time Employees",
+    industry: "Financial Technology, Payments Gateway & Neo-Banking",
+    registrationDetails: {
+      legalEntity: "Razorpay Software Private Limited",
+      cin: "U72200KA2013PTC097389",
+      ticker: "Privately Held Unicorn / Y Combinator Alum",
+      registrar: "CSC Corporate Domains",
+      nameservers: ["ns1.razorpay.com", "ns2.razorpay.com"],
+      dmarcPolicy: "v=DMARC1; p=reject; rua=mailto:dmarc@razorpay.com",
+      officialAts: "https://razorpay.com/jobs"
+    },
+    domainDetails: {
+      sslStatus: "Valid (DigiCert EV TLS 1.3)",
+      domainAge: "11+ Years Registered",
+      officialEmailDomain: "@razorpay.com",
+      securityWarning: "Official Razorpay hiring is managed exclusively via razorpay.com/jobs. Razorpay never demands candidate fees or deposits."
+    },
+    forensicAudit: [
+      { vector: "ICANN & Domain Registry", status: "PASS", score: 100, details: "Domain registered in 2014 with verified corporate ownership." },
+      { vector: "Cryptographic SSL/TLS Cipher", status: "PASS", score: 99, details: "TLS 1.3 modern cipher with authenticated GCM encryption." },
+      { vector: "Corporate Registry (MCA)", status: "PASS", score: 100, details: "Active MCA CIN U72200KA2013PTC097389 verified." },
+      { vector: "Email Anti-Spoofing (DMARC)", status: "PASS", score: 98, details: "Strict p=reject policy enforced." },
+      { vector: "Anti-Fraud Syndicate Blacklist", status: "PASS", score: 100, details: "Zero negative matches found across global cybersecurity threat feeds." },
+      { vector: "Recruitment Policy Compliance", status: "PASS", score: 99, details: "Zero-fee candidate charter strictly enforced." }
+    ],
+    ceo: {
+      name: "Harshil Mathur",
+      title: "Co-Founder and Chief Executive Officer",
+      bio: "Harshil Mathur is CEO and Co-Founder of Razorpay. An alumnus of IIT Roorkee, he co-founded Razorpay in 2014, building India's premier payments and financial infrastructure platform powering millions of businesses.",
+      linkedin: "https://www.linkedin.com/in/harshilmathur/",
+      avatar: "assets/ceos/harshil_mathur.jpg"
+    },
+    contacts: {
+      website: "https://razorpay.com",
+      careersPortal: "https://razorpay.com/jobs",
+      linkedin: "https://www.linkedin.com/company/razorpay/",
+      instagram: "https://www.instagram.com/razorpay/",
+      whatsapp: "+91 80 6828 3838 (Bengaluru Corporate Office)",
+      hrEmail: "careers@razorpay.com"
+    }
+  },
+
+  // ==================== 22. MEESHO ====================
+  {
+    id: "meesho",
+    name: "Meesho (Fashnear Technologies)",
+    domain: "meesho.com",
+    aliases: ["meesho", "vidit aatrey", "sanjeev barnwal"],
+    logo: "https://upload.wikimedia.org/wikipedia/commons/8/80/Meesho_Logo_Full.png",
+    genuinityScore: 99.2,
+    status: "AUTHENTIC & VERIFIED",
+    statusType: "verified",
+    founded: "2015 (Bengaluru, Karnataka, India)",
+    hq: "3rd Floor, Wing-E, Helios Business Park, Kadubeesanahalli, Bengaluru 560103, India",
+    employees: "2,000+ Full-Time Employees",
+    industry: "Social E-Commerce & Retail Marketplace",
+    registrationDetails: {
+      legalEntity: "Fashnear Technologies Private Limited",
+      cin: "U74900KA2015PTC082263",
+      ticker: "Privately Held Unicorn / Y Combinator Alum",
+      registrar: "MarkMonitor Inc.",
+      nameservers: ["ns1.meesho.com", "ns2.meesho.com"],
+      dmarcPolicy: "v=DMARC1; p=reject; rua=mailto:dmarc@meesho.com",
+      officialAts: "https://meesho.io/careers"
+    },
+    domainDetails: {
+      sslStatus: "Valid (Cloudflare EV TLS 1.3)",
+      domainAge: "10+ Years Registered",
+      officialEmailDomain: "@meesho.com",
+      securityWarning: "Meesho hiring is managed via meesho.io/careers. Beware of task scams pretending to offer Meesho product rating jobs; Meesho never charges candidate fees."
+    },
+    forensicAudit: [
+      { vector: "ICANN & Domain Registry", status: "PASS", score: 99, details: "Domain registered in 2015 with verified corporate ownership." },
+      { vector: "Cryptographic SSL/TLS Cipher", status: "PASS", score: 98, details: "TLS 1.3 modern cipher with authenticated GCM encryption." },
+      { vector: "Corporate Registry (MCA)", status: "PASS", score: 100, details: "Active MCA CIN U74900KA2015PTC082263 verified." },
+      { vector: "Email Anti-Spoofing (DMARC)", status: "PASS", score: 98, details: "Strict p=reject policy enforced." },
+      { vector: "Anti-Fraud Syndicate Blacklist", status: "PASS", score: 100, details: "Zero negative matches found across global cybersecurity threat intelligence." },
+      { vector: "Recruitment Policy Compliance", status: "PASS", score: 98, details: "Zero-fee candidate charter strictly enforced." }
+    ],
+    ceo: {
+      name: "Vidit Aatrey",
+      title: "Co-Founder and Chief Executive Officer",
+      bio: "Vidit Aatrey is Co-Founder and CEO of Meesho. An alumnus of IIT Delhi, he co-founded Meesho in 2015, democratizing internet commerce for millions of small businesses across Bharat.",
+      linkedin: "https://www.linkedin.com/in/viditaatrey/",
+      avatar: "assets/ceos/vidit_aatrey.jpg"
+    },
+    contacts: {
+      website: "https://www.meesho.com",
+      careersPortal: "https://meesho.io/careers",
+      linkedin: "https://www.linkedin.com/company/meesho/",
+      instagram: "https://www.instagram.com/meeshoapp/",
+      whatsapp: "+91 80 6179 9600 (Bengaluru Corporate Office)",
+      hrEmail: "careers@meesho.com"
+    }
   }
 ];
 

@@ -42,7 +42,7 @@ class NumberedCanvas(canvas.Canvas):
         self.setStrokeColor(colors.HexColor("#e2e8f0"))
         self.setLineWidth(0.5)
         self.line(40, 800, 555, 800)
-        self.drawString(40, 805, "VORA Sentinel — Level 5 Cybersecurity Project Report")
+        self.drawString(40, 805, "VORA GENERATION — Level 5 Cybersecurity Project Report")
         self.drawRightString(555, 805, "Candidate: Aarya J Menon")
 
         # Footer rule and text
@@ -165,8 +165,8 @@ def build_pdf(filename="VORA_Sentinel_Level5_Cybersecurity_Project_Report.pdf"):
     # ==================== COVER PAGE ====================
     story.append(Spacer(1, 40))
     story.append(Paragraph("UNIVERSITY ACADEMIC CAPSTONE REPORT", ParagraphStyle('Kicker', alignment=1, fontName='Helvetica-Bold', fontSize=10, textColor=c_secondary, spaceAfter=8)))
-    story.append(Paragraph("VORA SENTINEL: AUTONOMOUS PHISHING INTERCEPTION, RECRUITMENT FRAUD THREAT INTELLIGENCE & MULTI-NODE ENDPOINT INTRUSION DETECTION SYSTEM", title_style))
-    story.append(Paragraph("A Complete-Stack Live Cloud Cybersecurity Engineering Project with Multi-Node Telemetry & Relational Forensics", sub_title_style))
+    story.append(Paragraph("VORA GENERATION", title_style))
+    story.append(Paragraph("Autonomous Phishing Interception, Corporate Recruitment Verification & Multi-Node Endpoint Cybersecurity System", sub_title_style))
     story.append(Paragraph("LEVEL 5 CYBERSECURITY — 100% SPECIFICATION COMPLIANT", badge_style))
     story.append(Spacer(1, 15))
 
@@ -175,10 +175,11 @@ def build_pdf(filename="VORA_Sentinel_Level5_Cybersecurity_Project_Report.pdf"):
         [Paragraph("<b>Candidate Email:</b>", body_style), Paragraph("aaryajmenon27@gmail.com", body_style)],
         [Paragraph("<b>Project Level & Category:</b>", body_style), Paragraph("Level 5 Cybersecurity Complete Stack Live Project", body_style)],
         [Paragraph("<b>Live Deployed Platform URL:</b>", body_style), Paragraph("https://voragenofficial.netlify.app", body_style)],
+        [Paragraph("<b>Live Relational Database Explorer:</b>", body_style), Paragraph("https://voragenofficial.netlify.app/database", body_style)],
         [Paragraph("<b>Live Cloud REST API Gateway:</b>", body_style), Paragraph("https://voragenofficial.netlify.app/api/health", body_style)],
         [Paragraph("<b>Mobile Node Probe Client:</b>", body_style), Paragraph("https://voragenofficial.netlify.app/mobile-node.html", body_style)],
         [Paragraph("<b>GitHub Repository URL:</b>", body_style), Paragraph("https://github.com/aaryajmenon/vora-sentinel-cybersecurity-soc", body_style)],
-        [Paragraph("<b>Database Layer:</b>", body_style), Paragraph("Persistent Relational SQLite (vora_sentinel.db) / Cloud Atlas", body_style)],
+        [Paragraph("<b>Database Layer:</b>", body_style), Paragraph("Persistent Relational SQLite (backend/vora_sentinel.db) with 6 Tables", body_style)],
         [Paragraph("<b>Academic Submission Year:</b>", body_style), Paragraph("2026 Final Semester Capstone Evaluation", body_style)]
     ]
     t_meta = Table(meta_data, colWidths=[150, 320])
