@@ -11,9 +11,26 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[headers]]
+  for = "/*.pdf"
+  [headers.values]
+    Content-Type = "application/pdf"
+    Content-Disposition = "attachment"
+
+[[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from = "/github"
+  to = "https://github.com/aaryajmenon27/vora-sentinel-cybersecurity-soc"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/report"
+  to = "/VORA_Sentinel_Level5_Cybersecurity_Project_Report.pdf"
+  status = 302
 
 [[redirects]]
   from = "/api/*"
